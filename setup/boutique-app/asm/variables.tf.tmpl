@@ -1,0 +1,58 @@
+variable "project_id" {
+    type = string
+    default = "$PROJECT_ID"
+}
+
+variable "gke1" {
+    type = string
+    default = "$GKE1"
+}
+
+variable "gke2" {
+    type = string
+    default = "$GKE2"
+}
+
+variable "gke1_location" {
+    type = string
+    default = "$GKE1_LOCATION"
+}
+
+variable "gke2_location" {
+    type = string
+    default = "$GKE2_LOCATION"
+}
+
+variable "gke1_kubeconfig" {
+    type = string
+    default = "$GKE1_KUBECONFIG"
+}
+
+variable "gke2_kubeconfig" {
+    type = string
+    default = "$GKE2_KUBECONFIG"
+}
+
+variable "asm_channel" {
+  type = string
+  default = "$ASM_CHANNEL"
+}
+
+variable "cni_enabled" {
+  type = string
+  default = "$CNI_ENABLED"
+}
+
+variable "cluster_admins" {
+  type = list(string)
+  default = [
+    "rajponna1@publicisgroupe.net",
+    "sidmoola@publicisgroupe.net",
+    "levrog1@publicisgroupe.net",
+    "harsunda1@publicisgroupe.net",
+    "amimahes@publicisgroupe.net",
+    "mudkonda@publicisgroupe.net",
+    "swecheru@publicisgroupe.net"
+  ]
+  description = "List of GCP Users who get the cluster-admin role binding."
+}
